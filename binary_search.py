@@ -55,12 +55,8 @@ def binary_search_index(lst : list, start : int, end : int,target : int,pred = l
         return binary_search_index(lst,start,mid-1,target,pred)
 
 
-#Code
-target = 99
-lst =  [_ for _ in range(0,100)]
-lst.sort()
-#Add print
-i = binary_search_index(lst,0,len(lst),target)
-print("Index: ",i )
-if(i is not None):  
-    print(lst[i])
+#Example
+target = "B"
+lst = ["A","B","C"]
+
+print(binary_search_index(lst,0,len(lst)-1,target,lambda t,c : ord(t) > ord(c)))
